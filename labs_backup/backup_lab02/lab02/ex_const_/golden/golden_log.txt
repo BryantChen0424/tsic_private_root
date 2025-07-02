@@ -1,0 +1,11 @@
+##SEC_STUDENT_CAN_SEE
+ signal         |  bin       dec(u)   dec(s)   hex  |  PASS?
+ ot             |  00000001  1         1         1    |  -
+ of             |  00000000  0         0         0    |  -
+ o1             |  00000101  5         5         5    |  -
+ o2             |  01100101  101       101       65   |  -
+ o16            |  01011010  90        90        5A   |  -
+ o_auto_expand  |  00000101  5         5         5    |  -
+ o_auto_cut     |  01011001  89        89        59   |  -
+ o_neg          |  11111011  251       -5        FB   |  -
+##END_STUDENT_CAN_SEE

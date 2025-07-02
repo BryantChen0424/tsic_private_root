@@ -1,0 +1,68 @@
+export LABSTOOLS=$DLAB_ROOT".private/playV_dev/"
+
+export LABS_DEV_ROOT=$DLAB_ROOT".private/labs_dev/"
+export LABS_LOCAL_BACKUP=$DLAB_ROOT".private/labs_backup/"
+export LABS_PUBLIC_ROOT=$DLAB_ROOT"public/labs/"
+
+export PROJECT_DEV_ROOT=$DLAB_ROOT".private/project/"
+export PROJECT_PUBLIC_ROOT=$DLAB_ROOT"public/project/"
+
+export LABSROOT=$LABS_PUBLIC_ROOT
+
+init_lab() {
+    mkdir "design_src"
+    mkdir "sim_src"
+    mkdir "sim_result"
+    mkdir "golden"
+}
+
+playV_git_update() {
+    git -C $LABSTOOLS pull
+    $LABSTOOLS/update.sh
+}
+
+labs_local_backup() {
+    for dir in "$LABS_DEV_ROOT"/lab*/; do
+        [ -d "$dir" ] || continue
+        base=$(basename "$dir")
+        cp -r "$dir" "$LABS_LOCAL_BACKUP/backup_$base"
+    done
+}
+
+labs_local_recovery() {
+    for dir in "$LABS_LOCAL_BACKUP"/backup_*/; do
+        [ -d "$dir" ] || continue
+        base=$(basename "$dir")
+        new_name="${base#backup_}"
+        cp -r "$dir" "$LABS_DEV_ROOT/$new_name"
+    done
+}
+
+lab_public_local_update() {
+    rm -rf "$LABS_PUBLIC_ROOT"/lab*
+    cp -r "$LABS_DEV_ROOT"/lab*/ "$LABS_PUBLIC_ROOT"/
+}
+
+lab_public_all_reset() {
+    git -C $LABS_DEV_ROOT pull
+    lab_public_local_update
+}
+
+
+project_public_local_update() {
+    rm -rf "$PROJECT_PUBLIC_ROOT"/dlab*
+    cp -r "$PROJECT_DEV_ROOT"/$1 "$PROJECT_PUBLIC_ROOT"/
+}
+
+project_public_reset() {
+    if [ -n "$1" ]; then
+        git -C "$PROJECT_DEV_ROOT" pull
+        project_public_local_update "$1"
+    fi
+}
+
+lab_public_all_reset() {
+    git -C "$PROJECT_DEV_ROOT" pull
+}
+
+            

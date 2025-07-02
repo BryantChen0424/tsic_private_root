@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "atomic": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "deque": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "iomanip": "cpp",
+        "iostream": "cpp",
+        "limits": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "mutex": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "thread": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp"
+    }
+}

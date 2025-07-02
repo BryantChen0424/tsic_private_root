@@ -1,0 +1,4 @@
+##SEC_STUDENT_CAN_SEE
+ signal         |  bin               dec(u)     dec(s)     hex   |
+ o16            |  0000000001011010  90          90          5A  
+##END_STUDENT_CAN_SEE

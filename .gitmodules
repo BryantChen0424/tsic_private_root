@@ -1,0 +1,12 @@
+[submodule "labs_dev"]
+	path = labs_dev
+	url = https://github.com/BryantChen0424/tsic_dlab
+[submodule "playV_dev"]
+	path = playV_dev
+	url = https://github.com/BryantChen0424/tsic_dlab_tools
+[submodule "project"]
+	path = project
+	url = https://github.com/BryantChen0424/tsic_project
+[submodule "projectV_dev"]
+	path = projectV_dev
+	url = https://github.com/BryantChen0424/tsic_project_tools

@@ -1,0 +1,9 @@
+##SEC_STUDENT_CAN_SEE
+  A  B |  o_and  o_or |  o_and*  o_or* | pass?
+-----------------------------------------------
+  0  0 |      0      0 |        0       0 |     -
+  0  1 |      0      1 |        0       1 |     -
+  1  0 |      0      1 |        0       1 |     -
+  1  1 |      1      1 |        1       1 |     -
+##END_STUDENT_CAN_SEE
+congratulation

@@ -1,0 +1,7 @@
+##SEC_STUDENT_CAN_SEE
+ a b | na_and_nb  sw | na_and_nb*  sw* | PASS?
+ 0 0 |     1        0 |      1        0  | -
+ 0 1 |     0        1 |      0        1  | -
+ 1 0 |     0        1 |      0        1  | -
+ 1 1 |     0        0 |      0        0  | -
+##END_STUDENT_CAN_SEE

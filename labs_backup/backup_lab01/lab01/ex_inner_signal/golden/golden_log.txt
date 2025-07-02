@@ -1,0 +1,7 @@
+##SEC_STUDENT_CAN_SEE
+ a b | o_and  o_or  o_nand o_nor | o_and* o_or* o_nand* o_nor* | PASS?
+ 0 0 |   0      0      1      1   |    0      0      1       1   | -
+ 0 1 |   0      1      1      0   |    0      1      1       0   | -
+ 1 0 |   0      1      1      0   |    0      1      1       0   | -
+ 1 1 |   1      1      0      0   |    1      1      0       0   | -
+##END_STUDENT_CAN_SEE
