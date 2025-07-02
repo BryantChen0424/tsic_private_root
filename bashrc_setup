@@ -60,3 +60,9 @@ project_public_reset() {
         project_public_local_update "$1"
     fi
 }
+
+update_process() {
+    lab_public_all_reset
+    $LABS_DEV_ROOT/update.sh
+    $PROJECT_DEV_ROOT/update.sh
+}
