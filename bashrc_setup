@@ -60,9 +60,3 @@ project_public_reset() {
         project_public_local_update "$1"
     fi
 }
-
-lab_public_all_reset() {
-    git -C "$PROJECT_DEV_ROOT" pull
-}
-
-            
