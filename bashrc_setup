@@ -1,4 +1,5 @@
 export LABSTOOLS=$DLAB_ROOT".private/playV_dev/"
+export PROJECTTOOLS=$DLAB_ROOT".private/projectV_dev/"
 
 export LABS_DEV_ROOT=$DLAB_ROOT".private/labs_dev/"
 export LABS_LOCAL_BACKUP=$DLAB_ROOT".private/labs_backup/"
@@ -63,6 +64,6 @@ project_public_reset() {
 
 update_process() {
     lab_public_all_reset
-    $LABS_DEV_ROOT/update.sh
-    $PROJECT_DEV_ROOT/update.sh
+    $LABSTOOLS/update.sh
+    $PROJECTTOOLS/update.sh
 }
