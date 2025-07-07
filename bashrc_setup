@@ -10,6 +10,8 @@ export PROJECT_PUBLIC_ROOT=$DLAB_ROOT"public/project/"
 
 export LABSROOT=$LABS_PUBLIC_ROOT
 
+export STUDENT_BACKUP="/home/verilog/Desktop/student_backup/"
+
 init_lab() {
     mkdir "design_src"
     mkdir "sim_src"
@@ -68,7 +70,9 @@ update_process() {
     $PROJECTTOOLS/update.sh
 }
 
-
+student_backup() {
+    find "$LABSROOT" -maxdepth 4 -type f -name "*.v" -exec cp {} "$STUDENT_BACKUP" \;
+}
 
 
 
