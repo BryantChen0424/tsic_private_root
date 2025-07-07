@@ -71,7 +71,11 @@ update_process() {
 }
 
 student_backup() {
+    if [ ! -d "$STUDENT_BACKUP" ]; then
+        mkdir -p "$STUDENT_BACKUP"
+    fi
     find "$LABSROOT" -maxdepth 4 -type f -name "*.v" -exec cp {} "$STUDENT_BACKUP" \;
+    find "$PROJECT_PUBLIC_ROOT" -maxdepth 4 -type f -name "*.v" -exec cp {} "$STUDENT_BACKUP" \;
 }
 
 
