@@ -68,6 +68,7 @@ update_process() {
     lab_public_all_reset
     $LABSTOOLS/update.sh
     $PROJECTTOOLS/update.sh
+    rm -rf /home/verilog/.config/google-chrome/*
 }
 
 student_backup() {
