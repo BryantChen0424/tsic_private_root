@@ -69,6 +69,7 @@ update_process() {
     $LABSTOOLS/update.sh
     $PROJECTTOOLS/update.sh
     rm -rf /home/verilog/.config/google-chrome/*
+    rm -rf /home/verilog/.mozilla/firefox/*
 }
 
 student_backup() {
