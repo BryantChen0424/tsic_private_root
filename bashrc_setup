@@ -58,10 +58,8 @@ project_public_local_update() {
 }
 
 project_public_reset() {
-    if [ -n "$1" ]; then
-        git -C "$PROJECT_DEV_ROOT" pull origin master --no-edit
-        project_public_local_update "$1"
-    fi
+    git -C "$PROJECT_DEV_ROOT" pull origin master --no-edit
+    # project_public_local_update
 }
 
 update_process() {
